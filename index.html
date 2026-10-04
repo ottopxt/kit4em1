@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kit de Ferramentas 4 em 1 - Martelete, Parafusadeira, Chave de Impacto e Esmerilhadeira 21V</title>
+<style>
+:root {
+    --primary: #FFC107;
+    --primary-dark: #E5A800;
+    --dark-bg: #1a1a1a;
+    --gray-dark: #2a2a2a;
+    --text-light: #f5f5f5;
+    --text-muted: #b0b0b0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    padding: 60px 0;
+    border-bottom: 3px solid var(--primary);
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(255, 193, 7, 0.2);
+}
+
+.hero-badge {
+    display: inline-block;
+    background: var(--primary);
+    color: #000;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.hero h1 span {
+    color: var(--primary);
+}
+
+.hero p.lead {
+    font-size: 18px;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+}
+
+.hero-features {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.hero-feature {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.hero-feature .icon {
+    width: 40px;
+    height: 40px;
+    background: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    font-weight: 800;
+}
+
+.price-box {
+    background: var(--gray-dark);
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 4px solid var(--primary);
+    margin-bottom: 25px;
+}
+
+.price-old {
+    text-decoration: line-through;
+    color: var(--text-muted);
+    font-size: 18px;
+}
+
+.price-new {
+    font-size: 38px;
+    font-weight: 800;
+    color: var(--primary);
+    margin: 5px 0;
+}
+
+.price-discount {
+    display: inline-block;
+    background: #d32f2f;
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.btn-cta {
+    display: inline-block;
+    background: var(--primary);
+    color: #000;
+    padding: 16px 50px;
+    font-size: 18px;
+    font-weight: 800;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+    box-shadow: 0 6px 20px rgba(255, 193, 7, 0.4);
+    text-decoration: none;
+}
+
+.btn-cta:hover {
+    background: var(--primary-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(255, 193, 7, 0.5);
+}
+
+/* SECTIONS */
+section {
+    padding: 70px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.section-title h2 span {
+    color: var(--primary);
+}
+
+.section-title p {
+    color: var(--text-muted);
+    font-size: 17px;
+}
+
+/* TOOLS GRID */
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.tool-card {
+    background: var(--gray-dark);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #333;
+}
+
+.tool-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(255, 193, 7, 0.15);
+    border-color: var(--primary);
+}
+
+.tool-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    background: #fff;
+    padding: 20px;
+}
+
+.tool-info {
+    padding: 25px;
+}
+
+.tool-number {
+    display: inline-block;
+    background: var(--primary);
+    color: #000;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 35px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.tool-info h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.tool-info p {
+    color: var(--text-muted);
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.tool-specs {
+    list-style: none;
+}
+
+.tool-specs li {
+    padding: 6px 0;
+    font-size: 14px;
+    color: var(--text-light);
+    border-bottom: 1px solid #333;
+}
+
+.tool-specs li:last-child {
+    border-bottom: none;
+}
+
+.tool-specs li strong {
+    color: var(--primary);
+}
+
+/* USAGE */
+.usage-section {
+    background: var(--gray-dark);
+}
+
+.usage-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.usage-item {
+    background: var(--dark-bg);
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #333;
+    transition: all 0.3s;
+}
+
+.usage-item:hover {
+    border-color: var(--primary);
+    transform: scale(1.03);
+}
+
+.usage-icon {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.usage-item h4 {
+    color: var(--primary);
+    margin-bottom: 8px;
+    font-size: 17px;
+}
+
+.usage-item p {
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+/* GALLERY */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    border-radius: 10px;
+    background: #fff;
+    padding: 15px;
+    transition: transform 0.3s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.03);
+}
+
+/* BENEFITS */
+.benefits-section {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.benefit-card {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.benefit-icon {
+    width: 70px;
+    height: 70px;
+    background: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 30px;
+}
+
+.benefit-card h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: var(--primary);
+}
+
+.benefit-card p {
+    color: var(--text-muted);
+    font-size: 15px;
+}
+
+/* CTA FINAL */
+.cta-section {
+    background: var(--primary);
+    color: #000;
+    text-align: center;
+    padding: 80px 0;
+}
+
+.cta-section h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.cta-section p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-dark {
+    display: inline-block;
+    background: #000;
+    color: var(--primary);
+    padding: 18px 60px;
+    font-size: 18px;
+    font-weight: 800;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-dark:hover {
+    background: #222;
+    transform: translateY(-3px);
+}
+
+/* FOOTER */
+footer {
+    background: #0d0d0d;
+    text-align: center;
+    padding: 30px 0;
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero-features {
+        gap: 15px;
+    }
+
+    .section-title h2 {
+        font-size: 28px;
+    }
+
+    .price-new {
+        font-size: 30px;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-image">
+                <img src="https://i.imgur.com/4EXsQz2.jpeg" alt="Kit de Ferramentas 4 em 1">
+            </div>
+            <div class="hero-text">
+                <span class="hero-badge">Kit Completo 4 em 1</span>
+                <h1>Tudo o que voce precisa em <span>um unico kit</span> de ferramentas 21V</h1>
+                <p class="lead">Martelete rotativo, parafusadeira, chave de impacto e esmerilhadeira com bateria de litio. Pronto para qualquer desafio profissional ou domestico.</p>
+                <div class="hero-features">
+                    <div class="hero-feature">
+                        <div class="icon">+</div>
+                        <span>Bateria 21V de alta performance</span>
+                    </div>
+                    <div class="hero-feature">
+                        <div class="icon">+</div>
+                        <span>Maleta de transporte</span>
+                    </div>
+                    <div class="hero-feature">
+                        <div class="icon">+</div>
+                        <span>2 baterias inclusas</span>
+                    </div>
+                </div>
+                <div class="price-box">
+                    <div class="price-old">De R$ 2.611,00</div>
+                    <div class="price-new">R$ 1.599,00</div>
+                    <span class="price-discount">39% OFF</span>
+                    <p style="margin-top:10px; color:var(--text-muted); font-size:14px;">ou 6x de R$ 266,50 sem juros</p>
+                </div>
+                <a href="#comprar" class="btn-cta">Comprar Agora</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- FERRAMENTAS DO KIT -->
+<section>
+    <div class="container">
+        <div class="section-title">
+            <h2>As <span>4 ferramentas</span> do kit</h2>
+            <p>Solucao completa para perfuracao, fixacao, corte e desbaste em um so conjunto.</p>
+        </div>
+        <div class="tools-grid">
+            <!-- 1 Martelete -->
+            <div class="tool-card">
+                <img class="tool-image" src="https://i.imgur.com/4EXsQz2.jpeg" alt="Martelete Rotativo">
+                <div class="tool-info">
+                    <span class="tool-number">1</span>
+                    <h3>Martelete Rotativo</h3>
+                    <p>Perfura concreto, alvenaria e pedra com facilidade. Combina percussao e rotacao para furos rapidos em materiais duros.</p>
+                    <ul class="tool-specs">
+                        <li><strong>Modo:</strong> Martelo + rotacao</li>
+                        <li><strong>Encaixe:</strong> SDS-Plus</li>
+                        <li><strong>Uso:</strong> Concreto, alvenaria, granito</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 2 Parafusadeira -->
+            <div class="tool-card">
+                <img class="tool-image" src="https://i.imgur.com/4EXsQz2.jpeg" alt="Parafusadeira">
+                <div class="tool-info">
+                    <span class="tool-number">2</span>
+                    <h3>Parafusadeira / Furadeira</h3>
+                    <p>Motor com mandril sem chave para troca rapida de brocas. Ideal para furar madeira, metal e parafusar com precisao.</p>
+                    <ul class="tool-specs">
+                        <li><strong>Mandril:</strong> Sem chave</li>
+                        <li><strong>Funcoes:</strong> Perfura + parafusa</li>
+                        <li><strong>Reversivel:</strong> Sim</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 3 Chave de Impacto -->
+            <div class="tool-card">
+                <img class="tool-image" src="https://i.imgur.com/4EXsQz2.jpeg" alt="Chave de Impacto">
+                <div class="tool-info">
+                    <span class="tool-number">3</span>
+                    <h3>Chave de Impacto</h3>
+                    <p>Alto torque para soltar e apertar parafusos com rapidez. Substitui o esforco manual em rodas de carro, estruturas e fixacoes pesadas.</p>
+                    <ul class="tool-specs">
+                        <li><strong>Encaixe:</strong> 1/2"</li>
+                        <li><strong>Uso:</strong> Automotivo, mecanica, marcenaria</li>
+                        <li><strong>Vantagem:</strong> Torque sem reacao no pulso</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 4 Esmerilhadeira -->
+            <div class="tool-card">
+                <img class="tool-image" src="https://i.imgur.com/4EXsQz2.jpeg" alt="Esmerilhadeira">
+                <div class="tool-info">
+                    <span class="tool-number">4</span>
+                    <h3>Esmerilhadeira</h3>
+                    <p>Corpo compacto e ergonomico para cortes em metal, desbaste e remocao de material. Disco de corte ja acompanha o kit.</p>
+                    <ul class="tool-specs">
+                        <li><strong>Disco:</strong> Acompanha disco de corte</li>
+                        <li><strong>Uso:</strong> Metal, tubos, soldas, rebarbas</li>
+                        <li><strong>Empunhadura:</strong> Antideslizante</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ONDE USAR -->
+<section class="usage-section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Onde voce pode <span>usar</span>?</h2>
+            <p>Aplicacoes reais para o seu dia a dia, do trabalho profissional ao projeto domestico.</p>
+        </div>
+        <div class="usage-grid">
+            <div class="usage-item">
+                <div class="usage-icon">#</div>
+                <h4>Construcao Civil</h4>
+                <p>Furos em concreto, fixacao de buchas e instalacoes em obra.</p>
+            </div>
+            <div class="usage-item">
+                <div class="usage-icon">#</div>
+                <h4>Marcenaria</h4>
+                <p>Montagem de moveis, perfuracao em madeira e fixacao de parafusos.</p>
+            </div>
+            <div class="usage-item">
+                <div class="usage-icon">#</div>
+                <h4>Automotivo</h4>
+                <p>Troca de rodas, fixacao de pecas e reparos mecanicos com a chave de impacto.</p>
+            </div>
+            <div class="usage-item">
+                <div class="usage-icon">#</div>
+                <h4>Serralheria</h4>
+                <p>Corte de metal, acabamento e remocao de rebarbas com a esmerilhadeira.</p>
+            </div>
+            <div class="usage-item">
+                <div class="usage-icon">#</div>
+                <h4>Reformas em Casa</h4>
+                <p>Instalacao de prateleiras, quadros, suportes e pequenos reparos.</p>
+            </div>
+            <div class="usage-item">
+                <div class="usage-icon">#</div>
+                <h4>DIY e Hobbies</h4>
+                <p>Projetos criativos, artesanato e montagem de pecas personalizadas.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- GALERIA -->
+<section>
+    <div class="container">
+        <div class="section-title">
+            <h2>Veja cada <span>detalhe</span></h2>
+            <p>Componentes do kit e maleta para transporte organizado.</p>
+        </div>
+        <div class="gallery-grid">
+            <img src="https://i.imgur.com/4EXsQz2.jpeg" alt="Kit completo">
+            <img src="https://i.imgur.com/4EXsQz2.jpeg" alt="Maleta e acessorios">
+            <img src="https://i.imgur.com/4EXsQz2.jpeg" alt="Martelete">
+            <img src="https://i.imgur.com/4EXsQz2.jpeg" alt="Parafusadeira">
+            <img src="https://i.imgur.com/4EXsQz2.jpeg" alt="Chave de impacto">
+            <img src="https://i.imgur.com/4EXsQz2.jpeg" alt="Esmerilhadeira">
+        </div>
+    </div>
+</section>
+
+<!-- BENEFICIOS -->
+<section class="benefits-section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Por que escolher <span>este kit</span>?</h2>
+            <p>Economia, praticidade e qualidade em uma so compra.</p>
+        </div>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <div class="benefit-icon">$</div>
+                <h3>Economia Real</h3>
+                <p>Comprar as ferramentas separadas custaria muito mais. O kit entrega 4 maquinas + 2 baterias + carregador + maleta por um preco unico.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">+</div>
+                <h3>Bateria Intercambiavel</h3>
+                <p>As 2 baterias de litio 21V servem para qualquer ferramenta do kit. Nunca pare o trabalho por falta de carga.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">W</div>
+                <h3>Sem Fio, Mais Liberdade</h3>
+                <p>Trabalhe em qualquer lugar: obras, garagens, quintais. Chega de procurar tomada ou lidar com extensoes.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">B</div>
+                <h3>Maleta Organizadora</h3>
+                <p>Tudo guardado em um so lugar. Facil de transportar e armazenar, sem perder pecas pelo caminho.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">P</div>
+                <h3>Para Profissional e Iniciante</h3>
+                <p>Leve, ergonomica e intuitiva. Funcionarios, tecnicos e hobistas tiram o maximo proveito desde o primeiro uso.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">%</div>
+                <h3>Pagamento Facilitado</h3>
+                <p>6x sem juros no cartao ou 5% de desconto extra pagando via Pix. Compra protegida e troca garantida.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-section" id="comprar">
+    <div class="container">
+        <h2>Garanta seu kit agora</h2>
+        <p>39% de desconto + 2 baterias de 21V + carregador + maleta de transporte inclusos. Envio para todo o Brasil com compra protegida.</p>
+        <div style="font-size: 28px; font-weight: 800; margin-bottom: 25px;">
+            R$ 1.599,00 <span style="font-size: 18px; font-weight: 400;">ou 6x de R$ 266,50</span>
+        </div>
+        <a href="#" class="btn-dark">Comprar com Desconto</a>
+    </div>
+</section>
+
+<footer>
+    <p>Kit de Ferramentas 4 em 1 | Bivolt automatico | Garantia e Nota Fiscal | Entrega para todo o Brasil</p>
+</footer>
+
+</body>
+</html>
